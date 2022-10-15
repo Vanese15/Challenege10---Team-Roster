@@ -5,25 +5,11 @@ const Engineer = require("./lib/Engineer");
 const Manager = require("./lib/Manager");
 const Intern = require("./lib/Intern");
 
-const teamAppMaker = () => {
+const employees = [];
     
 const teamGenerator = () => {
     return inquirer.prompt(userInput)
-}}
 
-const userInput = [
-    inquirer.prompt([{
-        type: "list",
-        message: "What type of employee would you like added to your team?",
-        name: "addEmployeePrompt",
-        options: ["Manager", "Engineer", "Intern"]
-        }]).then(userInput) {
-            
-        }
-
-
-
-]
 
 
 
