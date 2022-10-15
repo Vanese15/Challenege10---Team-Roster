@@ -2,10 +2,10 @@
 
 const fs = require("fs");
 const path = require("path");
-const distPath = path.join("./dist/index.html");
-const Engineer = require("./lib/Engineer.js");
-const Manager = require("./lib/Manager.js");
-const Intern = require("./lib/Intern.js");
+const distPath = path.join("./dist");
+const Engineer = require("./lib/Engineer");
+const Manager = require("./lib/Manager");
+const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
 
 
