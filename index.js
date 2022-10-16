@@ -9,11 +9,11 @@ const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
 
 
-const teamMembers = [];
+function teamMembers () {};
 
 
 
-const teamGenerator = () => {
+function createTeam () {
     return inquirer.prompt([{
         type: "list",
         message: "What is the team member's role?",
@@ -59,7 +59,7 @@ const addManager = () => {
     ]).then(answers => {
         const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.officeNumber);
         teamMembers.push(manager);
-        teamGenerator();
+        createTeam();
     })
 }; 
 
@@ -88,7 +88,7 @@ const addEngineer = () => {
     ]).then(answers => {
       const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
       teamMembers.push(engineer);
-      teamGenerator();
+      createTeam();
     })
 };   
     
@@ -118,14 +118,14 @@ const addIntern = () => {
   ]).then(answers => {
     const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
     teamMembers.push(intern);
-    teamGenerator();
+    createTeam();
   });
 
 };
 
 function htmlGenerator () {
     console.log("Team has been successfully created!")
-    fs.writeFile(distPath, createTeam(teamMembers))
+    fs.writeFile(distPath, generateTeam(teamMembers))
 }
 
-teamGenerator();
+createTeam();
