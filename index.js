@@ -35,7 +35,7 @@ const teamGenerator = () => {
 };    
     
 const addManager = () => {
-    inquirer.prompt([{
+    return inquirer.prompt([{
         type: "input",
         name: "managerName",
         message: "What is the manager's name?",
@@ -43,12 +43,12 @@ const addManager = () => {
        {
         type: "input",
         name: "managerId",
-        message: "What is the manager's employee ID number?"
+        message: "What is the manager's ID number?"
         },
         {
          type: "input",
          name: "managerEmail",
-         message: "What is the manager's employee email address?"
+         message: "What is the manager's email address?"
          },
         {
          type: "input",
@@ -64,7 +64,7 @@ const addManager = () => {
 }; 
 
 const addEngineer = () => {
-    inquirer.prompt([{
+    return inquirer.prompt([{
         type: "input",
         name: "engineerName",
         message: "What is the engineer's name?"
@@ -72,7 +72,7 @@ const addEngineer = () => {
       {
         type: "input",
         name: "engineerId",
-        message: "What is the engineer's employee ID number?" 
+        message: "What is the engineer's ID number?" 
       },
       {
         type: "input",
@@ -94,7 +94,7 @@ const addEngineer = () => {
     
 
 const addIntern = () => {
-    inquirer.prompt([{
+    return inquirer.prompt([{
       type: "input",
       name: "internName",
       message: "What is the intern's name?"
@@ -102,7 +102,7 @@ const addIntern = () => {
     {
       type: "input",
       name: "internId",
-      message: "What is the intern's employee ID number?" 
+      message: "What is the intern's ID number?" 
     },
     {
       type: "input",
