@@ -26,7 +26,6 @@ const generateEngineer = function (engineer) {
   `;
 };
 
-
 const generateIntern = function (intern) {
   return `
   <div class="col-4 mt-4">
@@ -77,7 +76,6 @@ const generateManager = function (manager) {
 
 // TODO: Create a function to generate cards for HTML
 
-
 generateHTML = (data) => {
   createCard = [];
 
@@ -101,12 +99,53 @@ generateHTML = (data) => {
     }
   }
 
+  const teamCards = createCard.join("");
+  const generateTeam = generateTeamRoster(teamCards);
 
-  const teamCards = createCard.join("")
+  return generateTeam;
+};
 
-  
+const generateTeamRoster = function (teamCards) {
+  return `
 
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css" />
+</head>
 
+<body>
+    <header>
+        <nav class="navbar" id="navbar">
+            <span class="navbar-brand mb-0 h1 w-100 text-center" id="navbar-text">Engineering Team</span>
+        </nav>
+    </header>
 
+    <main>
+        <div class="container">
+            <div class="row justify-content-center" id="employee-cards">
+            
+            //Employee Cards//
+
+            ${teamCards}
+
+            </div>
+
+        </div>
+
+        </div>
+    
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+</body>
+</html>
+</html>
+ 
+`;
+};
 
 module.exports = generateHTML;

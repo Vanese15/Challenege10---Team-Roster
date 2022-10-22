@@ -6,7 +6,7 @@ const path = require("path");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
-// const generateHTML = require("./output/generateHTML");
+const generateHTML = require("./output/generateHTML");
 
 // Your task is to build a Node.js command-line application that takes in information
 // about employees on a software engineering team,
@@ -165,4 +165,20 @@ const addManager = () => {
     });
 };
 
-// generateHTML;
+// function to generate HTML in fs
+
+function writeFile(fileName, data) {
+  fs.appendFile(`${fileName}.html`, data, (err) =>
+    err
+      ? console.log(err)
+      : console.log(`${fileName}.html has been created successfully!`)
+  );
+}
+
+async function init() {
+  let answers = await createTeam();
+  writeToFile(answers.fileName, generateHTML(answers));
+}
+
+// Function call to initialize app
+init();
