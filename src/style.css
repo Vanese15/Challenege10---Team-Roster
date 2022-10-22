@@ -1,0 +1,55 @@
+/* Stylesheet for Generated HTML */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#navbar {
+    background-color: rgb(122, 28, 28);
+    color: antiquewhite;  
+}
+
+.navbar-brand:hover {
+    color: whitesmoke;
+}
+
+.navbar-brand {
+    font-size: 80px;
+    color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    background-color: rgb(122, 28, 28);
+}
+
+.card-header {
+    background-color: rgb(122, 28, 28);
+    color: whitesmoke;
+    padding: 20px;
+    box-shadow: 10px 10px 5px rgb(153, 150, 150);
+}
+
+.card-body {
+    background-color: gray;
+    font-size: 18px;
+    padding: 20px;
+    box-shadow: 10px 10px 5px rgb(153, 150, 150);
+}
+
+.container {
+    margin: 40px auto;
+}
+
+.icon-link {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid gray;
+}
+
+
+
+
