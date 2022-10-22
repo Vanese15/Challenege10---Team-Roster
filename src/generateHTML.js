@@ -95,7 +95,7 @@ generateHTML = (data) => {
 
     if (role === "Manager") {
       const managerCard = generateManager(employee);
-      createCard.push(ManagerCard);
+      createCard.push(managerCard);
     }
   }
 

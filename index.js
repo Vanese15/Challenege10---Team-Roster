@@ -3,7 +3,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
-const srcPath = path.join("main.html");
+const outputPath = path.join("output", "main.html");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
@@ -33,7 +33,7 @@ const teamProfile = require("./src/generateHTML.js");
 // WHEN I decide to finish building my team
 // THEN I exit the application, and the HTML is generated
 
-teamMembers = [];
+const teamMembers = [];
 
 function init() {
   function createTeam() {
@@ -176,7 +176,7 @@ function init() {
 
   function generateHTML() {
     console.log("Team Profile has been created successfully!");
-    fs.writeFileSync(srcPath, teamProfile(teamMembers));
+    fs.writeFileSync(outputPath, teamProfile(teamMembers));
   }
 
   createTeam();
