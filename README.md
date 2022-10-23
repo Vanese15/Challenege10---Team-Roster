@@ -1,3 +1,4 @@
+![1](https://user-images.githubusercontent.com/16092802/197367793-f9a90692-dc26-4e50-8b58-28ac6ae52144.png)
 # Challenege10---Team-Roster
 I built a Node.js command-line application that takes in information 
 about employees on a software engineering team.  The applicaltion
