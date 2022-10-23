@@ -127,8 +127,6 @@ const generateTeamRoster = function (teamCards) {
     <main>
         <div class="container">
             <div class="row justify-content-center" id="employee-cards">
-            
-            //Employee Cards//
 
             ${teamCards}
 
